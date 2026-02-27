@@ -8,8 +8,27 @@
 #sets(set) {'a','b','c','d','e'}
 
 #To know what type is a variable we use
-# type(name_variable)
+type(name_variable)
 
 #we also have converters
 #implicit converters = we dont use any functions
+v1= 7.5
+v2= 10
+suma=v1 + v2
+#si hacemos esto, el tipo será combinado de float, aunque tengamos un integer en v2
+type(suma)
+
 #explicit converters = we use special functions
+int(name_variable)
+float(name_variable)
+string(name_variable)
+
+#function FORMAT, kind of weird to human eye and little bit difficult to read
+print("My car is {} and it has a plate number {}".format(car_color, plate_n))
+puntos_anteriores = 875
+puntos_nuevos = 350
+print("Has ganado {} puntos! En total, acumulas {} puntos".format(puntos_nuevos,puntos_nuevos + puntos_anteriores))
+
+
+#literal chains
+print(f"My car is {car_color} and it has a plate number {plate_n}")
