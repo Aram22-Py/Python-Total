@@ -6,3 +6,10 @@
 #dictionaries (dic) - {'color':'rojo', 'arte':'cine'}
 #Tuples(tuple) - ('mon', 'tue', 'wed')
 #sets(set) {'a','b','c','d','e'}
+
+#To know what type is a variable we use
+# type(name_variable)
+
+#we also have converters
+#implicit converters = we dont use any functions
+#explicit converters = we use special functions
