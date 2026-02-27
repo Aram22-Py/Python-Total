@@ -5,7 +5,7 @@
 #lists(list) - ["salt", 1 , -3, "beach", 0]
 #dictionaries (dic) - {'color':'rojo', 'arte':'cine'}
 #Tuples(tuple) - ('mon', 'tue', 'wed')
-#sets(set) {'a','b','c','d','e'}
+#sets(set) {'a','b','c','d','e'} no duplicated values
 
 #To know what type is a variable we use
 type(name_variable)
@@ -32,3 +32,17 @@ print("Has ganado {} puntos! En total, acumulas {} puntos".format(puntos_nuevos,
 
 #literal chains
 print(f"My car is {car_color} and it has a plate number {plate_n}")
+
+
+#operators: +, -, / , * , al piso  //, module %, power **, sqrt **0.5
+print(874//27)
+print(456%33)
+print(783**0.5)
+
+# ROUND function, second factor rounds the decimals after point
+round(number_to_round, number_of_digits_after_point)
+print(round(10/3,2))
+
+
+
+
