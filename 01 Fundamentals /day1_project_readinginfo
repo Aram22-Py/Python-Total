@@ -1,0 +1,2 @@
+print ("The beer is now called: \n" + '"' + input("type 1 word which will be part of a beer's name:") + 
+       " " + input("type another word to complete the name:" ) +'"')
