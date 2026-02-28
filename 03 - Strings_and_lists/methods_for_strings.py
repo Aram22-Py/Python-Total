@@ -32,6 +32,13 @@ print(frase[0:9])
 #find() - does the same thing as index but if something is not found, it returns a -1
 #replace() - requires 2 arguments, the 1st one is the word we want to replace and the 2nd one is the thing we are going to put in its place
 
+#some string PROPERTIES
+# three air commas allow to jump a line if we use enter in the string
+haiku= """Tierra mojada
+mis recuerdos de viaje,
+entre las lluvias"""
+#we can check if a string is within a variable. In the next line will be printed if True or False
+print("agua" not in haiku)
 
 
 
