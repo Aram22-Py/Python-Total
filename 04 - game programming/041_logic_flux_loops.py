@@ -70,4 +70,32 @@ for numero in lista_numeros:
 print(suma_pares)
 print(suma_impares)
 
+#BREAKing loop
+lista_numeros = [4,5,8,7,6,9,8,2,4,5,7,1,9,5,6,-1,-5,6,-6,-4,-3]
+for numero in lista_numeros:
+    if numero < 0:
+        break
+    else:
+        print(numero)
+
+
+
+
+#WHILE Loop
+#it executes something while its  contion is accomplished
+numero = 10
+while numero >=0: #condition
+    print(numero) #do
+    numero-=1 # it decreases the variable each iteration by 1
+
+#Example: show the numbers only multiples by 5
+numero = 50
+while numero >= 0:
+    if numero%5==0:
+        print(numero)
+    numero-=1
+
+
+
+
 
