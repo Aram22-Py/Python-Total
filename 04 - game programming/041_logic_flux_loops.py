@@ -37,3 +37,37 @@ if edad >= 18:
         print("Puedes conducir") 
 else:
     print("No puedes conducir aún. Debes tener 18 años y contar con una licencia")
+
+
+
+# Loop FOR 
+# it reads every element in a list, tuple, dictionary or even a string; it executes the instructions for each element
+alumnos_clase = ["María", "José", "Carlos", "Martina", "Isabel", "Tomás", "Daniela"]
+#in here, the variable 'alumno' is an iteration variable or a loop variable
+#NOTE: the iteration variable saves the last value of the iteration.
+#it keeps existing after the cycle so it is advisable to use a name with no importance or that wont be used after that loop
+for alumno in alumnos_clase:
+    print("Hola " + alumno)
+print(alumno) #it will print the last value of the list: 'Daniela'
+
+#example: sum all the numbers in the list
+lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+suma_numeros =0 #we give a value to the variable so it can start from zero
+for numero in lista_numeros:
+    suma_numeros=numero + suma_numeros
+#as it was an iteration it will add the previous value with the new one and it garanties to add all of them    
+print(suma_numeros)
+
+#sum evens and odds
+lista_numeros = [1,5,8,7,6,8,2,5,2,6,4,8,5,9,8,3,5,4,2,5,6,4]
+suma_pares = 0
+suma_impares = 0
+for numero in lista_numeros:
+    if numero%2==0 :
+        suma_pares = suma_pares + numero
+    else:
+        suma_impares = suma_impares + numero
+print(suma_pares)
+print(suma_impares)
+
+
