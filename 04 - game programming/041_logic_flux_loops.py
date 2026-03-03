@@ -79,6 +79,10 @@ for numero in lista_numeros:
         print(numero)
 
 
+#RANGE
+mi_lista = list(range(2500,2586)) #a list is created, note that the value 2586 is not included
+
+
 
 
 #WHILE Loop
