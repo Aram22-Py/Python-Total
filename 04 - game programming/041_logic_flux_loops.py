@@ -81,7 +81,16 @@ for numero in lista_numeros:
 
 #RANGE
 mi_lista = list(range(2500,2586)) #a list is created, note that the value 2586 is not included
-
+#creates a list from 3 to 300(included) with 3-by-3 steps
+mi_lista = list(range(3,301,3))
+#EJERCICIO:
+"""Utiliza la función range() y un loop para sumar los cuadrados de todos los números del 1 al 15 (inclusive). 
+Almacena el resultado en una variable llamada suma_cuadrados."""
+mi_lista=list(range(1,16))
+suma_cuadrados =0
+for numero in mi_lista:
+    suma_cuadrados = suma_cuadrados + (numero**2)
+print(suma_cuadrados)
 
 
 
@@ -98,6 +107,30 @@ while numero >= 0:
     if numero%5==0:
         print(numero)
     numero-=1
+
+
+#ENUMERATE: we can create a list with its elements and their respective index WITH: list(enumerate(name_list)
+#EXAMPLE:
+"""Imprime en pantalla frases como la siguiente:
+'{nombre} se encuentra en el índice {indice}'
+Donde nombre debe ser cada uno de los nombres de la lista a continuación, y el índice, obtenido mediante enumerate(). """
+lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
+new_list=list(enumerate(lista_nombres))
+for indice,nombre in new_list:
+    print(f'{nombre} se encuentra en el índice {indice}')
+
+#works also in STRINGS
+lista_indices= list(enumerate("Python"))
+
+#EXERCISE: 
+#Imprime en pantalla únicamente los índices de aquellos nombres de la lista a continuación, que empiecen con M:
+lista_nombres = ["Marcos", "Laura", "Mónica", "Javier", "Celina", "Marta", "Darío", "Emiliano", "Melisa"]
+new_list= list(enumerate(lista_nombres))
+for indice,nombre in new_list:
+    if nombre.startswith("M")== True:
+        print(indice)
+
+
 
 
 
