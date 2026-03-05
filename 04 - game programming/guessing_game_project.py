@@ -1,3 +1,8 @@
+#Guessing the number game
+#PROJECT 4
+
+"""#The user will try to guess a number in 8 attempts. 
+#Our number, generated randomly by our program, will be between 0 an 100."""
 #we first generate our number
 from random import randint
 our_number=randint(0,100)
@@ -21,6 +26,7 @@ while user_number != our_number:
         
     elif user_number == our_number:
         print("You win! Your number is the same as ours, you guessed right!")
+        print(f"The number we had was '{our_number}' ")
         print("it took you " + str(8 - number_of_attempts) + " attemps to make it!")
         break
     
@@ -33,4 +39,12 @@ while user_number != our_number:
         print(" You loose!! All attempts were used. Restart the game to play again")
         print(f"The number we had was '{our_number}' ")
         break
+
+
+
+
+
+
+
+
 
