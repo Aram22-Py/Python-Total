@@ -131,8 +131,46 @@ for indice,nombre in new_list:
         print(indice)
 
 
+#ZIP function, combines 2 lists and it makes them a tuple: in the next event we will have - list(zip(paises,capitales)) = [(Alemania, Berlín), (Japón, Tokio)...]
+
+#EXERCISE: 
+capitales = ["Berlín", "Tokio", "París", "Helsinki", "Ottawa", "Canberra"]
+paises = ["Alemania", "Japón", "Francia", "Finlandia", "Canadá", "Australia"]
+new_list =list(zip(paises, capitales))
+for pais,capital in new_list:
+    print(f"La capital de {pais} es {capital}")
 
 
 
 
+#Randint from Random library
+from random import randint # we have to import the library and the method first
+aleatorio = randint(1,10) #returns a random value from 1 to 10(or any range we choose)
 
+#Random from Random library - return a float from 0 to 1, only that!
+from random import random
+aleatorio = random()
+
+#Choice from random library - returns a random element from a sequence of mutable values, as a list
+from random import choice
+nombres = ["Carlos", "Julia", "Nicole", "Laura", "Mailen"]
+sorteo=choice(nombres)
+
+
+#LISTS COMPRESSION - it is used to writte less code but it sacrifices readability
+#it creates a new list using an iterable object (lists, tuples, strings)
+#basically is - expresion_involving_value_1 for value_1 in name_lists if condition_1
+#with else - expression if condition_1 else another_expression for value_1 in name_lists
+#exercise 1
+valores = [1, 2, 3, 4, 5, 6, 9.5]
+valores_cuadrado = [val**2 for val in valores]
+print (valores_cuadrado)
+
+#EXERCISE 2
+valores = [1, 2, 3, 4, 5, 6, 9.5] 
+valores_pares =[par for par in valores if par%2==0]
+
+#Exercise 3, converting degrees
+temperatura_fahrenheit = [32, 212, 275]
+grados_celsius = [(grado - 32)*(5/9) for grado in temperatura_fahrenheit]
+print(grados_celsius)
