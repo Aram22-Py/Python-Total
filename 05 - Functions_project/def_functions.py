@@ -73,5 +73,49 @@ def evaluar_jugada(dados_resultado):
 final=evaluar_jugada(dados_resultado)
 print(final)
 
+#excercise "REMOVING DUPLICATES"
+lista_numeros=[1,2,15,7,2,1,7,2,2,2,2,2]
+reduce_=[]
+def reducir_lista(lista):
+    reduce_=[]
+#esta parte nos ayuda a "comparar" 2 listas, basicamente agregamos 1 elemento a una lista vacía
+#pero que venga de la lista dada. Entonces, en la sig iteración, si el elemento ya está en la nueva lista simplemente no lo agregamos y así vamos eliminando duplicados
+    for n in lista:
+        if n not in reduce_:
+            reduce_.append(n)
+        else:
+            pass
+    reduce_.remove(max(lista))
+    return reduce_
 
+xy=reducir_lista(lista_numeros)
+print(xy)
+#new function with average obtained from previous list
+def promedio(lista):
+    suma=0
+    for n in lista:
+        suma= suma +n
+    return (suma/len(lista))
+average=promedio(xy)
+print(average)
+
+
+#ejemplo
+from random import choice
+moneda=["Cara", "Cruz"]
+lista_numeros=[1,2,3,4,5]
+def lanzar_moneda():
+    moneda=["Cara", "Cruz"]
+    resultado_lanzamiento=choice(moneda)
+    return resultado_lanzamiento
+lanzamiento=lanzar_moneda()
+
+def probar_suerte(lanzamiento,lista):
+    if lanzamiento=="Cara":
+        texto_cara=print("La lista se autodestruirá")
+        lista.clear()
+        return lista
+    elif lanzamiento=="Cruz":
+        texto_cruz=print("La lista fue salvada")
+        return lista
 
