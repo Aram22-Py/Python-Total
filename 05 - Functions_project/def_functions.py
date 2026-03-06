@@ -36,3 +36,42 @@ def suma_menores(lista_numeros):
         else:pass
     return suma
 print(suma_menores(lista_numeros)) #1303
+
+
+#EXAMPLE: in this case, the function returned a list with the 2 values
+lista_numeros=[0,1,2,300,1000,4000]
+def cantidad_pares(lista_numeros):
+    suma_pares=0
+    cantidad_pares=0
+    for n in lista_numeros:
+        if n%2==0:
+            suma_pares=suma_pares + n
+            cantidad_pares+=1
+        else:pass
+    return [cantidad_pares,suma_pares]
+pares_c=cantidad_pares(lista_numeros)
+print(pares_c)
+
+
+#Example
+from random import randint
+def lanzar_dados(): #we through the dice and we obtain 2 random results
+    resultado_dado1=randint(1,6)
+    resultado_dado2 =randint(1,6)
+    return (resultado_dado1, resultado_dado2)
+dados_resultado= lanzar_dados()#we call the function to obtain the 2 dice results
+
+#we use dice results to evaluate our chances according to the text
+def evaluar_jugada(dados_resultado):
+    suma_dados=dados_resultado[0] + dados_resultado[1]
+    if suma_dados<=6:
+        return print(f"La suma de tus dados es {suma_dados}. Lamentable")
+    elif suma_dados>6 and suma_dados<10:
+        return print(f"La suma de tus dados es {suma_dados}. Tienes buenas chances")
+    elif suma_dados>=10 and suma_dados<=12:
+        return print(f"La suma de tus dados es {suma_dados}. Parece una jugada ganadora")        
+final=evaluar_jugada(dados_resultado)
+print(final)
+
+
+
