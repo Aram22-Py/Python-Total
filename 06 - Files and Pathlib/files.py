@@ -13,3 +13,10 @@ archivo.write("Nuevo texto")
 archivo=open('mi_archivo.txt','r')# here we open the file to read it with 'r'
 print(archivo.read())
 archivo.close()
+
+#now we have the option in opening the dile with 
+archivo=open('mi_archivo.txt','a')
+archivo.write("Nuevo inicio de sesión")
+archivo=open('mi_archivo.txt','r')# we have to open it again with readable mode
+print(archivo.read())
+archivo.close()
