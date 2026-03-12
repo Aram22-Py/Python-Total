@@ -36,3 +36,11 @@ def lista_atributos(**kwargs):
     return lista1
 print(lista_atributos(x=1,y=2,z=3)) #[1, 2, 3]
 
+#EXAMPLE
+def describir_persona(nombre, **kwargs):
+    Carac=f"Características de {nombre}:\n"
+    for key,value in kwargs.items():
+        Carac+= f"{key}: {value}\n"
+    return Carac
+print(describir_persona("María", color_ojos="azules",color_pelo="rubio"))
+
