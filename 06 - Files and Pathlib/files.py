@@ -20,3 +20,11 @@ archivo.write("Nuevo inicio de sesión")
 archivo=open('mi_archivo.txt','r')# we have to open it again with readable mode
 print(archivo.read())
 archivo.close()
+
+#example
+reg_sesion=open("registro.txt",'a')
+registro_ultima_sesion = ["Federico", "20/12/2021", "08:17:32 hs", "Sin errores de carga"]
+for info in registro_ultima_sesion: #add each element of the list at the end of the file
+    reg_sesion.write(info +"\t")
+reg_sesion=open("registro.txt",'r')
+print(reg_sesion.read() )
