@@ -28,3 +28,21 @@ for info in registro_ultima_sesion: #add each element of the list at the end of 
     reg_sesion.write(info +"\t")
 reg_sesion=open("registro.txt",'r')
 print(reg_sesion.read() )
+
+
+
+#example with FUNCTIONS
+def abrir_leer(parametro): #it opens a file and returns what is read
+    texto=open(parametro,'r')
+    return texto.read()
+
+
+#example, it overwrites all thext with the specified
+def sobrescribir(parametro):
+    texto=open(parametro,'w')
+    return texto.write("contenido eliminado")
+
+#Example. it adds text at the end of the cursor
+def registro_error(parametro):
+    texto = open(parametro, 'a')
+    return texto.write("se ha registrado un error de ejecución")
