@@ -18,3 +18,50 @@ class Personaje:
         self.magico=magico
         self.edad=edad
 harry_potter = Personaje('Humano', True, 17)
+
+
+# METHODS
+class Perro:
+    def __init__(self):
+        pass
+    def ladrar(self): #basically a function that will be executed in a class instance
+        print('Guau!')
+
+##example
+class Mago:
+    def __init__(self):
+        pass
+    def lanzar_echizo(self):
+        print('¡Abracadabra!')
+merlin=Mago()
+merlin.lanzar_echizo()
+
+
+
+#Types of METHODS
+#STATHIC method
+class Mascota:
+    def __init__(self):
+        pass
+    @staticmethod #stathic method, does not access to other methods and no class attributes, does not required an instance
+    def respirar():
+        print("Inhalar... Exhalar")
+
+
+#Class METHOD
+class Jugador:
+    vivo = False
+    @classmethod
+    def revivir(cls):
+        cls.vivo=True #modify the class attribute
+
+
+
+#HERITANCE
+class Persona:
+    def __init__(self,nombre,edad):
+        self.nombre=nombre
+        self.edad=edad
+        
+class Alumno(Persona):#we just pass the main class as argument and it heritates the same attributes
+    pass
