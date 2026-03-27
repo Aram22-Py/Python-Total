@@ -65,3 +65,19 @@ class Persona:
         
 class Alumno(Persona):#we just pass the main class as argument and it heritates the same attributes
     pass
+
+
+#EXTENDED heritance
+class Padre():
+    def trabajar(self):
+        print("Trabajando en el Hospital")
+
+    def reir(self):
+        print("Ja ja ja!")
+
+class Madre():
+    def trabajar(self):
+        print("Trabajando en la Fiscalía")
+        
+class Hija(Madre, Padre):#it heritates the methods firs of the mother and then the father
+    pass
