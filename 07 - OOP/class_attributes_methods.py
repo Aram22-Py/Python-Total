@@ -81,3 +81,62 @@ class Madre():
         
 class Hija(Madre, Padre):#it heritates the methods firs of the mother and then the father
     pass
+
+
+# EXAMPLE 2
+class Mago():
+    def atacar(self):
+        print("Ataque mágico")
+
+class Arquero():
+    def atacar(self):
+        print("Lanzamiento de flecha")
+
+class Samurai():
+    def atacar(self):
+        print("Ataque con katana")
+#we had 3 classes with the same method so we applied the polimorfismo to create an iterator to run it in a list of class intances
+arquero1=Arquero()
+mago1=Mago()
+samurai1=Samurai()
+#we create the list
+personajes=[arquero1,mago1,samurai1]
+#iterator runs it in  the list
+for character in personajes:
+    character.atacar()
+
+
+#polomorfismo in a function
+class Mago():
+    def defender(self):
+        print("Escudo mágico")
+
+class Arquero():
+    def defender(self):
+        print("Esconderse")
+
+class Samurai():
+    def defender(self):
+        print("Bloqueo")
+#we create the function and receive any instance of any class
+def personaje_defender(instancia):
+    return instancia.defender()
+
+
+
+#Special MEthods like __str__, __len__, __del__
+#EXAMPLE of them
+class Libro():
+    def __init__(self, titulo, autor, cantidad_paginas):
+        self.titulo = titulo
+        self.autor = autor
+        self.cantidad_paginas = cantidad_paginas
+        
+    def __str__(self):#makes a literal chain using attributes
+        return f' "{self.titulo}", de {self.autor}'
+        
+    def __len__(self): #counts how many things we have on the attribute
+        return self.cantidad_paginas
+mi_libro=Libro("It","Stephen King",390)#we create an instance and we assign attributes
+print(mi_libro)
+print(len(mi_libro))
