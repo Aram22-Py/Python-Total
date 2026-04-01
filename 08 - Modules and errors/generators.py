@@ -1,4 +1,6 @@
 #GENERATORS
+#"Son tipos especiales de funciones que devuelven un iterador que no almacena su contenido 
+#completo en memoria, sino que "demora" la ejecución de una expresión hasta que su valor se solicita."
 def mi_generador() :
     x=0
     #for x in range[1,float(inf)]:
